@@ -1,8 +1,33 @@
+<!--
+    코드에서 스타일을 입힐 때
+    각가의 코드 안에 style을 작성해주는 것보다
+    <head> 아래에 <style> 이라는 태그를 만들어서
+        내가 한번에 꾸미고자하는 태그 이름과 꾸밀 내용을 {}안에 작성해주는 것이
+        더 강력하게 작용을함
+
+<tr style="background-color: rosybrown;">
+    ↑ 처럼 작성한 것 보다 ↓처럼 작성한 것이 더 우선으로 디자인을 입힘
+<haed>
+    <style>
+        th {
+            background-color: coral;
+        }
+    </style>
+</haed>
+-->
+
 <!DOCTYPE html>
 <html lang="ko">
     <head>
         <title>음식가게</title>
         <meta charset="UTF-8"> 
+        <!--변경하고자 하는 스타일이 여러개라면, 작성해서 한 번에 적용 가능-->
+        <style>
+            th, td{
+                background-color: coral;
+            }
+        </style>
+
     </head>
     <body>
         <h1>메뉴판</h1>
@@ -10,10 +35,10 @@
             style 에서는 스타일을 하나씩 치장을 하고 치장을 종료할 때 ; 사용
             text-align: center; 는 글자를 가운데로 정렬
         -->
-        <table border="1" style="width: 100%; text-align: center; border-collapse: collapse;">
+        <table border="1" style="width: 100%; text-align: center; border-collapse: collapse; ">
             <tr style="background-color: rosybrown;">
-                <td >음식</td>
-                <td >가격</td>
+                <th >음식</th>
+                <th >가격</th>
             </tr>
             <tr>
                 <td>피자</td>
@@ -35,6 +60,95 @@
                 <td>음료수</td>
                 <td>2,000원</td>
             </tr>
+        </table>
+        <hr>
+        <hr>
+        <hr>
+
+        <h1>게시판</h1>
+        <ul>
+            <!--
+            <li><strong>게시물 제목1</strong></li><br>
+            작성자: 사용자1<br>
+            작성일: 2024-05-27<br>
+            내용: 이 게시물은 첫번째 게시물입니다.<br>
+            <p></p>
+
+            <li><strong>게시물 제목2</strong></li><br>
+            작성자: 사용자2<br>
+            작성일: 2024-05-06<br>
+            내용: 이 게시물은 첫번째 게시물입니다.<br>
+            -->
+            <li>
+                <h3>게시물 제목1</h3>
+                <p>
+                    작성자: 사용자1<br>
+                    작성일: 2024-05-27<br>
+                    내용: 이 게시물은 첫번째 게시물입니다.<br>
+                </p>
+            </li>
+            <li>
+                <h3>게시물 제목2</h3>
+                <pre>
+작성자: 사용자2
+작성일: 2024-05-06
+내용: 이 게시물은 첫번째 게시물입니다.
+                </pre>
+            </li>
+                
+        </ul>
+        <br>
+        <h1>게시물 목록 (테이블)</h1>
+        <table border="1" style="border-collapse: collapse;">
+            <tr style="text-align: center; background-color: rosybrown;">
+                <th>게시물 제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>내용</th>
+            </tr>
+            <tr>
+                <td>게시물 제목1</td>
+                <td>사용자1</td>
+                <td>2024-05-06</td>
+                <td>이게시물은 첫번째 게시물입니다.</td>
+            </tr>
+            <tr>
+                <td>게시물 제목2</td>
+                <td>사용자2</td>
+                <td>2024-05-07</td>
+                <td>이게시물은 두번째 게시물입니다.</td>
+            </tr>
+            <tr>
+                <td>게시물 제목3</td>
+                <td>사용자3</td>
+                <td>2024-05-08</td>
+                <td>이게시물은 세번째 게시물입니다.</td>
+            </tr>
+            <tr>
+                <td>게시물 제목4</td>
+                <td>사용자4</td>
+                <td>2024-05-09</td>
+                <td>이게시물은 네번째 게시물입니다.</td>
+            </tr>
+
+        </table>
+
+        <hr>
+<br><br><br><Br><Br><br>
+        <h1>하수정 컬렉션</h1>
+
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <td rowspan="5">제품리스트</td>
+                <td>코드</td>
+                <td>분류</td>
+                <td>가격</td>
+                <td>구매가능개수</td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+
         </table>
 
     </body>
