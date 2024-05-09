@@ -1,0 +1,78 @@
+<!--주의할점 사진이나 동영상 음악파일 100MB 이상은 깃허브에 올라가지 않음 현재는 100MB이상 사용x-->
+<!DOCTYPE html>
+<html lang="ko">
+    <head><!--meta style title link scrip-->
+        <title>이미지 텍스트 비디오를 활용한 블로그</title>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                margin: 0 auto;
+                text-align: center;
+                background-color: rgb(213, 248, 236);
+            }
+            p {
+                /*단축키로 ctrl space를 누르면 사용 예제가 나옴*/
+                font-size: 20px; /* 글자 크기 조절*/
+                font-weight: 900; /* 글자 굵기 조절 숫자로는 최대 900*/
+            }
+            table {
+                border: 2px solid plum;
+                border-collapse: collapse; 
+                margin: 0 auto;
+                width: 80%;
+            }
+            tr, td {
+                border: 2px solid rgb(96, 96, 235);
+                padding: 10px;
+                text-align: center;
+            }
+
+            th {
+                background-color: blueviolet;
+                color: white; /*글자색*/
+                border: 3px solid rgb(108, 3, 206);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>😀 즐거운나라 😀</h1>
+        <br>
+        <img src="이미지들/pig.jpg"
+        alt="pig"
+        />
+        <p>〃ユてИロБ속‥ĿИスГさı는[¿]</p>
+        <br>
+        <video autoplay loop muted>
+            <source src="비디오들/186714-878826932_small.mp4" 
+            type="video/mp4">
+        </video>
+        <p>😃제 블로그에 오신 것을 환영합니다😃</p>
+        <br>
+        <table>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>방문일</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>홍길동</td>
+                <td>2024-05-09</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>박철수</td>
+                <td>2024-05-08</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>강영희</td>
+                <td>2024-05-07</td>
+            </tr>
+        </table>
+    </body>
+    <foot>
+        <!-- & copy; © 모양을 나타내는 표시 주로 회사를 표현할 때 사용-->
+        &copy; 2024 간단한 블로그 All rights reserved.
+    </foot>
+</html>
