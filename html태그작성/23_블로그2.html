@@ -26,6 +26,15 @@
                 border-radius: 20px;
 
             }
+
+            .이미지꾸미기 {
+                width: 50%;
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                border-radius: 30px;
+                height: 250px; /*.d이미지꾸미기에서 먼저 width를 %로 적용했을 때 height를 %를 할때는 안먹힘*/
+            }
         </style>
     </head>
     <body>
@@ -36,6 +45,28 @@
             <video class="비디오꾸미기" autoplay muted loop>
                 <source src="../비디오들/198488-907576442_small.mp4" type="video/mp4">
             </video>
+            <br>
+            <br>
+            <h2>두 번 째 포스트 : 이미지 추가하기</h2>
+            <p>이 포스트에는 이미지가 포함되어 있습니다. &#128586</p>
+            <img class="이미지꾸미기" src="../이미지들/swimmingPartyMarley.jpg" alt="수영장 말리">
+            <br>
+            <div class="댓글들">
+                <h2>모든 댓글</h2>
+                <div class="댓글">
+                    <p1>사용자1 :</p1>
+                    <p>이 블로그 정말 멋져요~</p>
+                </div>
+                <div class="댓글">
+                    <p1>사용자2 :</p1>
+                    <p>이미지가 너무 귀엽내요</p>
+                </div>
+                <div class="댓글">
+                    <input type="text" placeholder="이름을 입력하세요">
+                    <input type="text" placeholder="내용을 입력하세요">
+                </div>
+
+            </div>
         </div>
     </body>
 </html>

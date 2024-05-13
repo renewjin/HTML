@@ -3,20 +3,77 @@
     <head>
         <title></title>
         <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: aliceblue;
+                margin: 0 auto;
+                
+            }
+            h1 {
+                text-align: center;
+            }
+
+            .컨테이너 {
+                background-color: white;
+                margin: 0 auto;
+                width: 70%;
+            }
+
+            .비디오꾸미기 {
+                width: 70%;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                height: 300px;
+                border-radius: 10px;
+            }
+
+            .댓글{
+                background-color: whitesmoke;
+                border-radius: 5px;
+                padding: 30px;
+                border: 1px solid black;
+            }
+
+            .icon {
+                
+                text-align: center;
+            }
+
+            a{
+                margin: 0 auto;
+                text-align: center;
+                
+            }
+        </style>
     </head>
     <body>
-        <h1>동영상 게시판</h1>
-        <br>
-        <video autoplay loop muted>
-            <source src="C:\Users\user1\frontend-workspace\html\비디오들\186714-878826932_small.mp4"
-            type="video/mp4">
-        </video>
-        <br>
-        <a href="홈페이지게시판.html">
-            <img src="게시판아이콘.png">
-        </a>
-        <a href="홈페이지메인.html">
-            <img src="메인아이콘.png">
-        </a>
+        <div class="컨테이너">
+            <h1>동영상 게시판</h1>
+            <br>
+            <video class="비디오꾸미기" autoplay loop muted>
+                <source src="C:\Users\user1\frontend-workspace\html\비디오들\186714-878826932_small.mp4"
+                type="video/mp4">
+            </video>
+            <br>
+            <a class="icon" href="홈페이지게시판.html">
+                <img src="게시판아이콘.png">
+            </a>
+            <a class="icon" href="홈페이지메인.html">
+                <img src="메인아이콘.png">
+            </a>
+        </div>
+        <div class="댓글들">
+            <h2 style="padding: 10px;">모든 댓글</h2>
+            <div class="댓글">
+                <p>사용자</p>
+                <p>첫번째 댓글</p>
+            </div>
+            <br>
+            <div class="댓글">
+                <p>사용자2</p>
+                <p>두번째 댓글</p>
+            </div>
+        </div>
     </body>
 </html>
