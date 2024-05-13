@@ -36,21 +36,22 @@
         <div class="컨테이너">
             <h1>블로그 설문조사</h1>
             <form>
-                <label>이름:</label>
+                <label>이름: <br>
+                    <input type="text" name="user_name" required>
+                </label>
                 <br>
-                    <input type="text" name="user_name">
+                <label>이메일:<br>
+                    <input type="email" name="email" required>
+                </label>
                 <br>
-                <label>이메일:</label>
+                <label>나이:<br>
+                    <input type="number" name="age" required>
+                </label>
                 <br>
-                    <input type="email" name="email">
+                <label>의견:
                 <br>
-                <label>나이:</label>
-                <br>
-                    <input type="number" name="age">
-                <br>
-                <label>의견:</label>
-                <br>
-                    <input type="text" name="comment">
+                    <input type="text" name="comment" required>
+                </label>
                 <br>
                 <br>
                 <button type="submit">제출</button>
