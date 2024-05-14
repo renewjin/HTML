@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>피자메뉴소개</title>
+        <style>
+            body {
+                background-color: #f9f9f9;
+            }
+            .컨테이너 {
+                width: 80%;
+                margin: 20px auto;
+            }
+            h1 {
+                text-align: center;
+            }
+            .메뉴 {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            img {
+                width: 200px;
+                border-radius: 100px;
+            }
+            .아이템 {
+                text-align: center;
+                padding: 10px ;
+            }
+            .해더, .푸터 {
+                text-align: center;
+                background-color: rgb(70, 69, 69);
+                color: white;
+                padding: 20px;
+            }
+            .네비게이션{
+                background-color: aliceblue;
+                padding: 10px;
+
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                display: inline; /*가로로 */
+            }
+            a {
+                text-decoration: none; /*링크의 밑줄 제거*/
+                color: slateblue;
+                font-weight: bold; /*글자 표현 두께 변경*/
+            }
+        </style>
+    </head>
+    <body>
+        <div class="해더">
+            <h1>KH 배달 서비스</h1>
+        </div>
+        <div class="네비게이션">
+            <ul>
+                <li><a href="홈페이지.html">홈</a></li>
+                <li><a href="주문하기.html">주문하기</a></li>
+                <li><a href="한식메뉴.html">한식메뉴소개</a></li>
+                <li><a href="#">피자메뉴소개</a></li>
+            </ul>
+        </div>
+        <div class="컨테이너">
+            <h1>피자메뉴</h1>
+            <div class="메뉴">
+                <div class="아이템">
+                    <img src="음식이미지/고르곤졸라.png">
+                    <h2>고르곤졸라피자</h2>
+                    <p>풍부한 치즈가 어우러진 클래식한 피자</p>
+                </div>
+                <div class="아이템">
+                    <img src="음식이미지/페퍼로니.png">
+                    <h2>페페로니피자</h2>
+                    <p>스파이시한 페페로니와 풍부한 치즈가 사랑받는 피자</p>
+                </div>
+            </div>
+        </div>
+        <div class="푸터">
+            &copy; 2024 배달 서비스. All right reserved.
+        </div>
+    </body>
+</html>
