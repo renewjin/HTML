@@ -79,7 +79,7 @@
             </strong>
 
             radion, checkbox 추가 속성
-            - value : 선택 되었을 때 제출될 값을 작성하는 소것ㅇ
+            - value : 선택 되었을 때 제출될 값을 작성하는 것
             - checked : 체크가 되어있게 하는 속성
         </pre>
 
@@ -150,9 +150,25 @@
                 type = "reset"
                     작성된 모든 값을 초기화
 
-                    type = "button"
-                        버튼 동작을 개발자가 만들고자 할 때 사용
+                type = "button"
+                    버튼 동작을 개발자가 만들고자 할 때 사용
         </pre>
+
+        <h3>textarea</h3>
+        <pre>
+            여러줄을 입력할 수 있는 입력 상자
+            
+            속성
+                - name : 제출되는 곳에서 데이터를 읽을 때 필요한 이름
+                - rows : textarea 행 크기 지정(rows="3" 3행) / 세로길이
+                - cols : textarea 열 크기 지정(rows="10" 10열) / 가로길이
+                - style="resize:none" : 크기 변경 불가
+        </pre>
+        <textarea name="데이터에필요한이름" cols="20" rows="5">
+            이름 :
+            나이 :
+            주소 :
+        </textarea>
 
     </body>
 </html>

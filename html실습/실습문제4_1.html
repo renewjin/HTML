@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>납품</title>
+        <style>
+            form {
+                padding-left: 10px;
+            }
+            .location {
+                width: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <form>
+                <label>
+                    1. 남품자명 : <input type="text" name="name">
+                </label>
+                <br><br>
+
+                <label>
+                    2. email : <input type="email" name="email" placeholder="answer@naver.com">
+                </label>
+                <br><br>
+
+                <label>
+                    3. 홈페이지 : <input type="text" name="homepage" value="http://">
+                </label>
+                <br><br>
+
+                <label>
+                    4. 지역 : <input class="location" type="text" name="location" value="부산">
+                </label>
+                <br><br><br>
+
+                <li>
+                    상품명 : <input type="text" name="productName">
+                </li>
+                <br>
+                <li>
+                    상품수량 : <input type="number" name="amount" placeholder="최소 100">
+                </li>
+                <br>
+                <li>
+                    남품등급 : <input type="range" name="grade" min="1" max="5">
+                </li>
+
+                <br>
+                <li>
+                    기타사항 : <input type="text" name="etc" style="height: 50pt;">
+                </li>
+            </form>
+            <br><br>
+            <button type="submit">send message</button>
+        </div>
+    </body>
+</html>

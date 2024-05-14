@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>피자 주문하기</title>
+        <style>
+            img {
+                width: 300px;
+            }
+
+            body {
+                background-color: #f9f9f9;
+            }
+
+            .컨테이너 {
+                width: 70%;
+                background-color: white;
+                padding: 20px;
+                margin: 0 auto;
+            }
+
+            h1{
+                text-align: center;
+            }
+            
+            .주문 {
+                margin: 0 auto;
+                padding: auto;
+                text-align: center;
+                display: block;
+            }
+
+            button {
+                background-color: yellowgreen;
+                border: none;
+                padding: 5px;
+                border-radius: 5px;
+            }
+
+            .음료꾸미기 {
+                width: 25px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="컨테이너">
+            <h1>피자 주문하기</h1>
+            <form>
+                <div class="피자종류">
+                    <label>피자선택 :</label>
+                    
+                        <input id="고르곤졸라" type="checkbox">
+                        <img src="../이미지들/고르곤졸라.png">
+                        
+                        <input id="페페로니" type="checkbox">
+                        <img src="../이미지들/페퍼로니.png">
+                    
+                    
+
+                </div>
+                <br>
+                <div class="토핑">
+                    <label> 토핑 선택 : </label>
+                    <select name="토핑">
+                        <option>기본</option>
+                        <option>페페로니</option>
+                        <option>야체</option>
+                        <option>치즈</option>
+                        <option>햄</option>
+                    </select>
+                </div>
+                <br>
+                <div class="크기">
+                    <label>크기 선택 :</label>
+                    <input type="radio" name="small" value="Small"> Small
+                    <input type="radio" name="medium" value="Medium" checked> Medium
+                    <input type="radio" name="large" value="Large"> Large
+                </div>
+                <br>
+                <div class="음료">
+                    <label>음료수 선택:</label>
+                    <input type="checkbox"> 콜라 <img class="음료꾸미기" src="../이미지들/콜라.png"> 
+                    <input type="checkbox"> 사이다
+                    <input type="checkbox"> 맥주 <img class="음료꾸미기" src="../이미지들/맥주.png">
+                </div>
+                <br>
+                <div class="주소">
+                    <label>배달 주소:</label>
+                    <textarea rows="3" cols="40"></textarea>
+                    <br>
+                    <small>도서/산간 지역은 배달비 3000 부과됩니다.</small>
+                </div>
+                <br>
+                <div class="주문">
+                    <button name="주문하기">주문하기</button>
+                    <button name="취소하기">취소하기</button>
+                </div>
+            </form>
+            <a href="홈페이지메인.html">메인으로돌아가기</a>
+        </div>
+    </body>
+</html>
