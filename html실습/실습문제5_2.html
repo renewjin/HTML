@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>회원가입</title>
+        <style>
+            .main, .해더 {
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+        
+            .회원정보입력 {
+                margin: 0 auto;
+                display: flex;
+                
+            }
+            .라벨 {
+                width: 130px;
+                text-align: center;
+                border-left: 1px solid rgb(107, 107, 107);
+                font-weight: bold; /*글자굵게*/
+                font-size: 16.5px;
+                
+            }
+
+            .버튼 {
+                margin: 40px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="해더">
+            <h1>회원 가입</h1>
+        </div>
+
+        <div class="main">
+            <div class="회원정보입력">
+                
+
+                <div class="라벨">
+                    <label>ID</label><br>
+                    <label>비밀번호</label><br>
+                    <label>비밀번호 확인</label><br>
+                    <label>Email</label>
+                </div>
+                <div class="입력">
+                    <input type="text" name="id" placeholder="아이디 10글자 이내" maxlength="10">&nbsp;<button>중복확인</button><br>
+                    <input style="width: 200px;" type="password" name="pw1" placeholder="영문,숫자,특수문자 포함 8자이상" minlength="8"><br>
+                    <input style="width: 200px;" type="password" name="pw2"><br>
+                    <input type="email" name="email1">&nbsp;
+                    <select name="email2">
+                        <option>직접입력</option>
+                        <option>@naver.com</option>
+                        <option>@gmail.com</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <div class="회원정보선택">
+                <div class="성별">
+                    <label>성별 : </label>
+                    <input type="radio" name="gender" value="남성"> 남성
+                    <input type="radio" name="gender" value="여성"> 여성
+                </div>
+                <br>
+                <div class="생일">
+                    <label>생년월일 : </label>
+                    <input type="date" name="birthday">
+                </div>
+                <br>
+                <div class="취미">
+                <input type="checkbox" name="hobby" value="야구">
+                    <label>야구</label>&nbsp;
+                    <input type="checkbox" name="hobby" value="농구">
+                    <label>농구</label>&nbsp;
+                    <input type="checkbox" name="hobby" value="축구">
+                    <label>축구</label><br>
+                    <input type="checkbox" name="hobby" value="공부" checked>
+                    <label>공부</label>&nbsp;
+                    <input type="checkbox" name="hobby" value="음악감상">
+                    <label>음악감상</label>
+                </div>
+                <br>
+                <div class="자기소개">
+                    <label>자기소개</label><br>
+                    <textarea name="intro" rows="10" cols="80"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="버튼">
+            <button>회원가입</button>
+            <button>다시입력</button>
+            
+        </div>
+    </body>
+</html>

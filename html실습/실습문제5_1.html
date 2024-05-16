@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>납품서</title>
+        <style>
+            li {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="납품자정보">
+                <ol>
+                    <li> 납품자명 : <input type="text" name="name" required> </li>
+                    <li> email : <input type="email" name="email" placeholder="answer@naver.com" required></li>
+                    <li> 홈페이지 : <input type="url" name="homepage" value="http://"></li>
+                    <li> 지역 : 
+                        <select name="location">
+                            <option>서울</option>
+                            <option selected>부산</option>
+                            <option>대구</option>
+                            <option>대전</option>
+                            <option>전북</option>
+                            <option>전남</option>
+                            <option>경남</option>
+                            <option>경북</option>
+                        </select>
+                    </li>
+                </ol>
+            </div>
+            <div class="납품정보">
+                <ul>
+                    <li>상품명 : <input type="text" name="productName" required></li>
+                    <li>납품수량 : <input type="number" name="amount" min="100" placeholder="최소 100"></li>
+                    <li>납품등급 : <input type="range" name="grade" min="1" max="5" value="4"></li>
+                    <li>기타사항 : <textarea rows="5" cols="20"></textarea></li>
+                </ul>
+            </div>
+            <br><br>
+            <button type="submit" name="messageButton">send message</button>
+        </div>
+    </body>
+</html>
