@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+    <style>
+
+        .회원정보입력 {
+            border-left: 2px solid #cccbcb; /* 왼쪽에 선 추가 */
+            padding-left: 10px; /* 선과 내용 사이의 여백 */
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .form-group label {
+            width: 100px; /* 레이블의 고정 너비 설정 */
+            margin-right: 10px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"] {
+            flex-grow: 1; /* 입력 필드의 너비 확장 */
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            flex-shrink: 0; /* 버튼의 크기 고정 */
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .회원정보선택, .회원정보기타 {
+            margin: 10px;
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <div class="container">
+        <form>
+            <div class="회원정보입력">
+                <div class="form-group">
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id" maxlength="10" placeholder="아이디 10글자 이내">
+                    <button type="button" onclick="checkDuplicate()">중복 확인</button>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="pw1" name="pw1" minlength="8" placeholder="영문, 숫자, 특수문자 포함 8자 이상">
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호확인</label>
+                    <input type="password" id="pw2" name="pw2" >
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상">
+                </div>
+            </div>
+            <div class="회원정보선택">
+                <div class="check-info">
+                    <label>성별 : </label><input type="radio" id="gender_M" name="gender_M" value="남성"> 남성
+                    </label><input type="radio" id="gender_W" name="gender_W" value="여성"> 여성
+                </div>
+                <br>
+                <div class="check-info"></div>
+                    <label>생년월일 : </label><input type="date">
+                <br>
+                <br>
+                <div class="check-info"></div>
+                    <label>취미</label>
+                    <br>
+                    <input type="checkbox" name="hobby_base" value="야구"> 야구
+                    <input type="checkbox" name="hobby_bask" value="농구"> 농구
+                    <input type="checkbox" name="hobby_foot" value="축구"> 축구
+                    <br>
+                    <input type="checkbox" name="hobby_study" value="공부" checked> 공부
+                    <input type="checkbox" name="hobby_music" value="음악감상"> 음악감상
+            </div>
+            <br>
+            <br>
+            <div class="회원정보기타">
+                <label>자기소개</label>
+                <br>
+                <textarea name="intro" rows="10" cols="80"></textarea>
+            </div>
+            <br>
+            <div class="버튼">
+                <button type="submit" onclick="clickedJoy()">회원가입</button>
+                <button type="reset" onclick="clickedReset()">다시입력</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function checkDuplicate() {
+            // 중복 확인 로직을 여기에 추가하세요.
+            alert("중복 확인 기능은 아직 구현되지 않았습니다.");
+        }
+
+        function clickedJoy() {
+            alert("회원가입 되었습니다.")
+        }
+
+        function clickedReset() {
+            alert("적으신 내용이 초기화 되었습니다.")
+        }
+    </script>
+</body>
+</html>
