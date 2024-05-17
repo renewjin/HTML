@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>레이아웃실습</title>
+    </head>
+    <body>
+        <style>
+            .블록 {
+                width: 120px;
+                height: 120px;
+                border: 2px dotted blue;
+                display: block; /*수직분할해줌*/
+            }
+            .영역1 {
+                background-color: lightcoral;
+            }
+            .영역2 {
+                background-color: lightseagreen;
+                color: white;
+            }
+            .영역3 {
+                background-color: lightgoldenrodyellow;
+            }
+            .영역4 {
+                background-color: lightsteelblue;
+            }
+            .영역5 {
+                background-color: lightgray;
+            }
+            .영역6 {
+                background-color: lightpink;
+            }
+
+            .인라인 {
+                display: inline; /*문자열처럼 취급*/
+            }
+            .인라인블락 {
+                display: inline-block; /*문자열처럼 취급하지만 크기가 유지함*/
+            }
+
+            .히든 {
+                visibility: hidden;
+            }
+
+            .논 {
+                display: none;
+            }
+
+        </style>
+        <h3> block 형식 요소를 inline 형식으로 변경</h3>
+        <div class="블록 영역1 인라인">1번영역</div>
+        <div class="블록 영역2 인라인">2번영역</div>
+        <div class="블록 영역1 인라인">1번영역</div>
+        
+        <br><br>
+        <h3>inline-block, none 확인하기</h3>
+        <div class="블록 영역1 인라인블락">1번영역</div>
+        <div class="블록 영역2 인라인블락">2번영역</div>
+        <div class="블록 영역3 인라인블락 히든">3번영역</div>
+        <div class="블록 영역4 인라인블락">4번영역</div>
+        <div class="블록 영역5 인라인블락 논">5번영역</div>
+        <div class="블록 영역6 인라인블락">6번영역</div>
+        
+    </body>
+
+    <hr>
+    <h3>화면 영역 분할</h3>
+    <h4>상하로 2분할 하기</h4>
+    <style>
+        .컨테이너 {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            
+        }
+        .컨테이너 div {
+            width: 50%;
+            height: 100%;
+            float: right;
+        }
+        
+        /*2분할 할때 컨테이너 밑에 있는 div영역을 첫번째 자식, 마지막자식으로 나눠 2분할 할 수 있음*/
+        .컨테이너 > div:first-child {
+            background-color: aquamarine;
+        }
+
+        .컨테이너 > div:last-child {
+            background-color: chocolate;
+        }
+    </style>
+    <div class="컨테이너">
+        <div></div>
+        <div></div>
+    </div>
+
+    <h4>상하로 n개수분할 하기</h4>
+    <style>
+        .컨테이너2 {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            background-color: yellow;
+            
+        }
+        .컨테이너2 div {
+            width: 100%;
+            height: 50%;
+        }
+        #태그 {
+            width: 400px;
+            height: 400px;
+            border: 2px solid white;
+        }
+
+        #태그 > div:nth-child(1) {
+            height: 50%;
+            background-color: yellowgreen;
+        }
+        /*
+        nth-child 특정한 순서에 있는 태그를 선택할 때 사용
+        */
+
+        #태그 > div:nth-child(2) {
+            height: 20%;
+            background-color: red;
+        }
+        #태그 > div:nth-child(3) {
+            height: 10%;
+            background-color: purple;
+        }
+    </style>
+    <div class="컨테이너2" id="태그">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</html>
