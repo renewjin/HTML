@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>실습문제6-2</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f7f7f7;
+            }
+
+            .헤더, .네비게이션, .푸터 {
+                background-color:aliceblue;
+                padding:10px;
+                text-align: center;   
+            }
+
+            .네비게이션 a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .문의사항양식 {
+                background-color: white;
+                margin: 10px 30px;
+                padding: 20px 10px;
+                box-shadow: 0, 0, 10px ;
+            }
+
+            .문의항목 {
+                padding: 5px;
+            }
+
+            .문의항목 input, .문의항목 select {
+                width: 100%;
+                height: 20px;
+                margin-top: 7px;
+            }
+
+            textarea {
+                margin-top: 5px;
+            }
+            
+            button {
+                width: 49%;
+                height: 30px;
+                border: none;
+                background-color: black;
+                color: white;
+            }
+
+            .콜 {
+                width: 40px;
+                height: 40px;
+                border: 1px solid black;
+                border-radius: 100%;
+                background-color: rgb(71, 71, 71);
+                position: fixed;
+                bottom: 10px;
+                right: 0px;
+            }
+
+            .콜 a {
+                color: white;
+                font-size: 20px;
+                width: 40px;
+                height: 40px;
+                display: block; 
+                text-align: center;
+                text-decoration: none;
+                line-height: 35px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="헤더">
+            <h1>문의하기</h1>
+        </div>
+        <div class="네비게이션">
+            <a href="#">회사소개</a>
+            <a href="#">팀소개</a>
+            <a href="#">문의하기</a>
+        </div>
+        <div class="메인">
+            <form>
+                <div class="문의사항양식">
+                    <h2>문의 사항을 남겨주세요</h2>
+                    <div class="문의항목">
+                        <label>문의분류</label>
+                        
+                        <select name="inquirycombo">
+                            <option>선택해주세요</option>
+                            <option selected>문의사항1</option>
+                            <option>문의사항2</option>
+                            <option>문의사항3</option>
+                            <option>문의사항4</option>
+                        </select>
+                    </div>
+                    <div class="문의항목">
+                        <label>이름</label>
+                        
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="문의항목">
+                        <label>이메일</label>
+                        
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="문의항목">
+                        <label>메시지</label>
+                        <br>
+                        <textarea name="inquiryTextbox" rows="10px" cols="80px" required></textarea>
+                    </div>
+                    <div class="문의항목">
+                        <button name="sendButton" type="submit">보내기</button>
+                        <button name="rewriteButton" type="reset">다시입력</button>
+                </div>
+            </form>
+        </div>
+        <div class="콜">
+            <a href="tel:+821012345678">&#9742</a>
+        </div>
+        <div class="푸터">
+            <p>&copy; 2024 KH쇼핑몰. All right reserved.</p>
+        </div>
+        
+    </body>
+</html>
