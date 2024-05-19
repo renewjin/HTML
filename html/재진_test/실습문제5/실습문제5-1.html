@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>실습문제5-1</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .납품자정보, .상품정보 {
+                margin: 40px 20px;
+            }
+
+            li {
+                padding: 10px 5px;
+            }
+
+            select {
+                width: 50px;
+            }
+
+            .버튼 {
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="납품자정보">
+                <ol type="1" start="1">
+                    <li><label>납품자명 : </label><input type="text" name="name" id="name" required></li>
+                    <li><label>email : </label><input type="email" name="email" id="email" placeholder="answer@naver.com" required></li>
+                    <li><label>홈페이지 : </label><input type="url" name="homepage" id="homepage"></li>
+                    <li><label>지역 : </label>
+                        <select name="location" id="location">
+                            <option>선택하세요</option>
+                            <option>서울</option>
+                            <option selected>부산</option>
+                            <option>경기도</option>
+                        </select>
+                    </li>
+                </ol>
+            </div>
+            
+            <div class="상품정보">
+                <ul>
+                    <li><label>상품명 : </label><input type="text" name="productName" id="productName" required></li>
+                    <li><label>납품수량 : </label><input type="number" name="amount" id="amount" placeholder="최소 100" min="100" required></li>
+                    <li><label>납품등급 : </label><input type="range" name="grade" id="grade" min="1" max="5" value="3"></li>
+                    <li><label>기타사항 : </label><textarea name="etc" id="etc" rows="5" cols="20"></textarea></li>
+                </ul>
+            </div>
+            
+            <div class="버튼">
+                <button type="submit">send message</button>
+            </div>
+        </form>
+    </body>
+</html>
