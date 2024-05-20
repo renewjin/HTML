@@ -127,18 +127,38 @@
                 const inputpw = document.getElementById("pw1").value;
                 const inputpw_confirm = document.getElementById("pw2").value;
 
+                const 영문자 = inputpw.match(/[a-zA-Z]/g) || [];
+                const 숫자문자 = inputpw.match(/[0-9]/g) || [];
+                const 특수문자 = inputpw.match(/[^a-zA-Z0-9]/g) || [];
+
                 if (inputpw.length<8) {
                     alert("비밀번호를 8자리 이상입력하세요");
                     document.getElementById("pw1").value = ""; // 적혀있던값을 삭제시켜줌
                     document.getElementById("pw2").value = "";
                     return;
+                } else {
+                    console.info(`영문자: ${영문자.length}개, 숫자: ${숫자문자.length}개, 특수문자: ${특수문자.length}개`);
+                    if (영문자.length == 0) {
+                        alert("비밀번호에 영문자가 빠져있습니다.영문자를 포함시키세요");
+                        return;
+                    } else if (숫자문자.length == 0) {
+                        alert("비밀번호에 숫자가 빠져있습니다.숫자를 포함시키세요");
+                        return;
+                    } else if (특수문자.length == 0) {
+                        alert("비밀번호에 특수문자가 빠져있습니다.특수문자를 포함시키세요");
+                        return;
+                    }
+                    
                 }
 
                 if(inputpw!=inputpw_confirm) {
                     alert("비밀번호가 일치하지 않습니다");
+                    return;
                 } else {
                     alert("비밀번호 확인하였습니다");
                 }
+
+                
             }
 
         </script>
