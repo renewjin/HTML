@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>회원가입 결과</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.1.js"></script>
+        <link rel="stylesheet" href="30_회원가입.css">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>회원가입 완료되신 것을 환영합니다.</h1>
+            <p>이름 : <span id="resultName"></span></p>
+            <p>나이 : <span id="resultAge"></span></p>
+            <p>성별 : <span id="resultGender"></span></p>
+            <p>아이디 : <span id="resultId"></span></p>
+            <p>취미 : <span id="resultHobby"></span></p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            //url 인터넷 주소 이름 나이 아이디 같이 들어와서 사람들한데 회원가입에 대한 결과 보여주기
+            /*
+            
+            */
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('signName');
+            $('#resultName').text(name);
+
+            const age =  urlParams.get('signAge');
+            $('#resultAge').text(age);
+
+            const gender = urlParams.get('signGender');
+            $('#resultGender').text(gender);
+
+            const id = urlParams.get('signId');
+            $('#resultId').text(id);
+
+            //체크박스는 선택이 여러개 모두 All
+            // 사용자가 선택한 체크박스를 모두 가져오기
+            const hobbies = urlParams.getAll('signHobby');
+            $('#resultHobby').text(hobbies.join(','));
+        })
+    </script>
+</html>
