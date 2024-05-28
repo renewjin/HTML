@@ -41,7 +41,7 @@
             //체크박스는 선택이 여러개 모두 All
             // 사용자가 선택한 체크박스를 모두 가져오기
             const hobbies = urlParams.getAll('signHobby');
-            $('#resultHobby').text(hobbies.join(','));
+            $('#resultHobby').text(hobbies.join(',')); //join을 사용해서 ,로 이어붙이기
         })
     </script>
 </html>

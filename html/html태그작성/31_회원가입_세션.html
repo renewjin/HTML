@@ -22,10 +22,8 @@
             function 회원가입버튼() {
                 //event.preventDefault; // form 제출을 막아버리는 버튼
 
-                //아이디로 작성한 값 가져오기
-                //비밀번호로 작성한 값 가져오기
-                const id = $('#signId').val();
-                const pw1 = $('#pw1').val();
+                const id = $('#signId').val(); //아이디로 작성한 값 가져오기
+                const pw1 = $('#pw1').val(); //비밀번호로 작성한 값 가져오기
 
                 //회원가입 할 때 정보를 Local Storage 저장
                 localStorage.setItem('signId', id);

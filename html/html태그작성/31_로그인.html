@@ -24,9 +24,11 @@
                 const 저장된PW = localStorage.getItem('signPw');
 
                 //window.location.href = '31_로그인결과.html';
+                console.info("저장된 ID : " + 저장된ID);
+                console.info("저장된 PW : " + 저장된PW);
 
                 //만약에 일치하는 아이디 비밀번호가 없다면
-                if(loginId !== 저장된ID && loginPw !== 저장된PW) {
+                if(loginId !== 저장된ID || loginPw !== 저장된PW) {
                     alert("일치하는 아이디와 비밀번호가 없습니다.");
                     event.preventDefault();
                 }
